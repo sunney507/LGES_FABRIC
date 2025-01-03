@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.58\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "1 페이지",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "0bff95c90295000039be",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0a7b86a7c4971672e61c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":133.25412317180118,\"y\":17.38097258762624,\"z\":0,\"width\":186.55577244052165,\"height\":69.52389035050496,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DimDate.Base_Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Base_Date\"},\"Name\":\"DimDate.Base_Date\",\"NativeReferenceName\":\"Base_Date\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Base_Date\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2023-09'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 69.52,
+          "width": 186.56,
+          "x": 133.25,
+          "y": 17.38,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"0e2117a5dd82d7cb0bd1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":337.1908681999491,\"y\":177.28592039378765,\"z\":1000,\"width\":826.1755636651673,\"height\":399.7623695154035,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"DimDate (2).년\",\"active\":true},{\"queryRef\":\"DimDate (2).Header2\",\"active\":true}],\"Values\":[{\"queryRef\":\"DimChannel.전년당년\"},{\"queryRef\":\"DimChannel.측정값\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimDate (2)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimChannel\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"년\"},\"Name\":\"DimDate (2).년\",\"NativeReferenceName\":\"년\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Header2\"},\"Name\":\"DimDate (2).Header2\",\"NativeReferenceName\":\"Header2\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"전년당년\"},\"Name\":\"DimChannel.전년당년\",\"NativeReferenceName\":\"전년당년\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"측정값\"},\"Name\":\"DimChannel.측정값\",\"NativeReferenceName\":\"측정값\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"dataBars\":{\"positiveColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}}},\"negativeColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}}},\"axisColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'foreground'\"}}}}},\"reverseDirection\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"hideText\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"totalMatchingOption\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}},\"selector\":{\"metadata\":\"DimChannel.전년당년\"}}],\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"SelectRef\":{\"ExpressionName\":\"DimChannel.전년당년\"}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"DimChannel.전년당년\"}}]}}}",
+          "filters": "[]",
+          "height": 399.76,
+          "width": 826.18,
+          "x": 337.19,
+          "y": 177.29,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"1a5392e1110a300369cb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":237.53995869755863,\"y\":441.4767037257065,\"z\":2001,\"width\":949.0011032843928,\"height\":149.47636425358567}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"DimChannel.측정값 2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimChannel\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"측정값 2\"},\"Name\":\"DimChannel.측정값 2\",\"NativeReferenceName\":\"측정값 2\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 149.48,
+          "width": 949.00,
+          "x": 237.54,
+          "y": 441.48,
+          "z": 2001.00
+        },
+        {
+          "config": "{\"name\":\"20a8a26a60646022cab0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":133.25412317180118,\"y\":416.9287764618218,\"width\":826.1755636651673,\"height\":228.27010665082463,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"DimDate.Base_Date\"},{\"queryRef\":\"Sum(FactSales.Total_Sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactSales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Base_Date\"},\"Name\":\"DimDate.Base_Date\",\"NativeReferenceName\":\"Base_Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total_Sales\"}},\"Function\":0},\"Name\":\"Sum(FactSales.Total_Sales)\",\"NativeReferenceName\":\"합계 Total_Sales개\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 228.27,
+          "width": 826.18,
+          "x": 133.25,
+          "y": 416.93,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
