@@ -1,0 +1,810 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.1004.0 (24.11)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Sheet1\"]"
+      }
+    ],
+    "culture": "ko-KR",
+    "cultures": [
+      {
+        "name": "ko-KR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "8d87d06e-1b4e-4c8e-a7fe-9b5a64c9f6d2",
+        "fromColumn": "Date",
+        "fromTable": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_bac4fe60-afee-47e4-ba8b-6f147b413417"
+      },
+      {
+        "name": "f6e3b557-2a68-4563-81bd-07e5a2564a2c",
+        "fromColumn": "Date",
+        "fromTable": "Sheet1",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_858ff8a3-3458-4a05-9b0f-e1d143730695"
+      }
+    ],
+    "sourceQueryCulture": "ko-KR",
+    "tables": [
+      {
+        "name": "Date",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "94c1d3435b1d4ee086c36f910f6d1e6c"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "b8c62fb5-15d2-4cba-aa70-1fa75ad9fd9d",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn",
+            "variations": [
+              {
+                "name": "변형",
+                "defaultHierarchy": {
+                  "hierarchy": "날짜 계층",
+                  "table": "LocalDateTable_bac4fe60-afee-47e4-ba8b-6f147b413417"
+                },
+                "isDefault": true,
+                "relationship": "8d87d06e-1b4e-4c8e-a7fe-9b5a64c9f6d2"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "7dbcec66-f0d7-4b1a-92bf-4e92a552edfd",
+            "sortByColumn": "Date",
+            "sourceColumn": "[Month]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "a10d396b-9e8b-4215-b455-e0c4e6d89f97",
+        "partitions": [
+          {
+            "name": "Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "ADDCOLUMNS(CALENDAR(DATE(2024,01,01), DATE(2025,12,31)),",
+                "",
+                "                \"Month\", FORMAT([Date], \"YYYYMMDD\"))"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_ddfcdc59-ac94-4105-ae2f-d1ef39dcb8cd",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "ed633c2a-b7d7-412e-836d-44777ff60186",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "연도",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0f2cd2c8-ed8a-4624-b288-8d520ce65939",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3fe45174-ea03-4045-a1f1-e8709aa64e41",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "월",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "4e7475e0-718c-45d4-bb66-4be50c6ad5ae",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "dee3e275-32fd-492b-8268-71af11ab5432",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "분기",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "862c07bf-39fb-43e5-913a-a3eb483ab413",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "일",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "cde7b846-a9d9-4c5c-9091-2842e45bf1cf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "날짜 계층",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "연도",
+                "column": "연도",
+                "lineageTag": "4f4e9f3d-9121-4707-9a05-beab40bf632d",
+                "ordinal": 0
+              },
+              {
+                "name": "분기",
+                "column": "분기",
+                "lineageTag": "ea416498-3faa-43c4-b481-3c7efb3d7d50",
+                "ordinal": 1
+              },
+              {
+                "name": "월",
+                "column": "월",
+                "lineageTag": "1fa33e71-8b4a-4fbf-9f60-e7bea8f3beca",
+                "ordinal": 2
+              },
+              {
+                "name": "일",
+                "column": "일",
+                "lineageTag": "dd924078-73aa-41bf-a65a-a87a26e98ecc",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "0441c380-b055-4a8b-aa03-2831375113e5"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "2665c12a-73dc-490a-aaa1-508ddfce6310",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_ddfcdc59-ac94-4105-ae2f-d1ef39dcb8cd",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_bac4fe60-afee-47e4-ba8b-6f147b413417",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "df300a8b-bfaa-4095-8d03-0881e8624aa2",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "연도",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "44134683-544d-4273-bc18-76923107e76c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "eece1fb0-825c-460a-96b1-3f085914a92f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "월",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "32abaa4b-7ff3-4478-a5e8-c8bdcfe3170d",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "ee5173d8-c50a-47c5-baca-335dc2a071f6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "분기",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "721d0df2-19b7-4afb-b10d-fc7e01c8a94b",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "일",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "acf8bd8e-8f54-4b37-a4b5-7d5d00b77a3a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "날짜 계층",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "연도",
+                "column": "연도",
+                "lineageTag": "9126dc19-072f-4dde-b6b1-e0a3023b752f",
+                "ordinal": 0
+              },
+              {
+                "name": "분기",
+                "column": "분기",
+                "lineageTag": "53af77fa-9ffc-4c5c-b5ff-d15a1743ac6c",
+                "ordinal": 1
+              },
+              {
+                "name": "월",
+                "column": "월",
+                "lineageTag": "db71423a-b77b-4582-b1bb-343a37e4362a",
+                "ordinal": 2
+              },
+              {
+                "name": "일",
+                "column": "일",
+                "lineageTag": "a4eb6465-e523-4118-9087-653b14ea71ff",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "2828bb97-f2dd-4d9c-b6c7-e5a5f250dcd7"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "75750c35-fcda-4623-ac7f-3fda1cf438ca",
+        "partitions": [
+          {
+            "name": "LocalDateTable_bac4fe60-afee-47e4-ba8b-6f147b413417",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Date'[Date])), 1, 1), Date(Year(MAX('Date'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Sheet1",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "b4ca811a-8082-4ea1-8494-3bd3796d8b41",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "변형",
+                "defaultHierarchy": {
+                  "hierarchy": "날짜 계층",
+                  "table": "LocalDateTable_858ff8a3-3458-4a05-9b0f-e1d143730695"
+                },
+                "isDefault": true,
+                "relationship": "f6e3b557-2a68-4563-81bd-07e5a2564a2c"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "c3a4075f-0d40-4f13-887c-0e5227846782",
+        "partitions": [
+          {
+            "name": "Sheet1",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    원본 = Excel.Workbook(File.Contents(\"C:\\Users\\sunne\\OneDrive - Zalesia Inc\\바탕 화면\\date.xlsx\"), null, true),",
+                "    Sheet1_Sheet = 원본{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"승격된 헤더\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),",
+                "    #\"변경된 유형\" = Table.TransformColumnTypes(#\"승격된 헤더\",{{\"Date\", type date}})",
+                "in",
+                "    #\"변경된 유형\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_858ff8a3-3458-4a05-9b0f-e1d143730695",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "1bfddded-2044-4b0c-ae61-d782ca99714c",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "연도",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "a2b67c40-b53c-4d9a-9c3c-b25758704297",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "36895556-50db-470d-8048-d424df66186f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "월",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "75ed5bee-c1b5-4996-9a47-7314cead74c6",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "c7c8497a-286d-451c-a405-66d8e39569b2",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "분기",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "c7787ba6-1cc8-42b6-b6b3-decd3ed4ec28",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "일",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "a988508b-e21b-4bac-a3e5-92de3a792a8a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "날짜 계층",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "연도",
+                "column": "연도",
+                "lineageTag": "5b78eb3b-2cb0-4b62-815a-e4fb1c6320e2",
+                "ordinal": 0
+              },
+              {
+                "name": "분기",
+                "column": "분기",
+                "lineageTag": "e1d17135-66c3-4f02-bb85-3077adf1714c",
+                "ordinal": 1
+              },
+              {
+                "name": "월",
+                "column": "월",
+                "lineageTag": "b5624b67-a411-4c27-a491-f30b4cd0cd3f",
+                "ordinal": 2
+              },
+              {
+                "name": "일",
+                "column": "일",
+                "lineageTag": "042c7de5-b2b4-4768-a86a-db51efa298c8",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4f8e4a53-5af8-4bd9-b365-fd6506621fbb"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "7a2c9e03-90c8-44cb-908d-f2fa4cf2d9b7",
+        "partitions": [
+          {
+            "name": "LocalDateTable_858ff8a3-3458-4a05-9b0f-e1d143730695",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Sheet1'[Date])), 1, 1), Date(Year(MAX('Sheet1'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}
