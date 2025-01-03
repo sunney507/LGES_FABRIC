@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../ssas_test1.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

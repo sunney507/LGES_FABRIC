@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "당년전월2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "214c6405-5f30-4346-b006-d95f53ad35b1"
+  }
+}

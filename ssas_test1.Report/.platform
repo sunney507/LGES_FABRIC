@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ssas_test1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "07a1202b-41f0-42d6-977f-0d032c8d3f07"
+  }
+}
