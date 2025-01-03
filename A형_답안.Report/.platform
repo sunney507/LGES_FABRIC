@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "A형_답안"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "90ed770e-cb79-4871-8be6-9a2d9c9078a9"
+  }
+}

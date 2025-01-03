@@ -1,0 +1,257 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.58\",\"type\":2},\"customTheme\":{\"name\":\"Test16773052064068437.json\",\"version\":\"5.58\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Test16773052064068437.json",
+            "path": "Test16773052064068437.json",
+            "type": 100
+          },
+          {
+            "name": "__2___2372362167041071.png",
+            "path": "__2___2372362167041071.png",
+            "type": 100
+          },
+          {
+            "name": "__3_5___8970590454584992.png",
+            "path": "__3_5___8970590454584992.png",
+            "type": 100
+          },
+          {
+            "name": "__3___6301469467423719.png",
+            "path": "__3___6301469467423719.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'문제2_배경.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"__2___2372362167041071.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "문제2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"21789d927bc0ad3274e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1031.9204419889502,\"y\":153.8828729281768,\"z\":5000,\"width\":173.99828115408226,\"height\":94.54241866175568,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"판매.매출이익률\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"매출이익률\"},\"Name\":\"판매.매출이익률\",\"NativeReferenceName\":\"매출이익률\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"매출이익률\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 94.54,
+          "width": 174.00,
+          "x": 1031.92,
+          "y": 153.88,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"4402c93e8cfdbb8bcd14\",\"layouts\":[{\"id\":0,\"position\":{\"x\":62.35776550030694,\"y\":42.24235727440147,\"z\":1000,\"width\":293.6849600982198,\"height\":47.27120933087784,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"매출분석 보고서\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 47.27,
+          "width": 293.68,
+          "x": 62.36,
+          "y": 42.24,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"46d60e2333728f9ea486\",\"layouts\":[{\"id\":0,\"position\":{\"x\":593.4045426642111,\"y\":153.8828729281768,\"z\":3000,\"width\":163.94057704112953,\"height\":94.54241866175568,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"판매.총수량\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"},\"Name\":\"판매.총수량\",\"NativeReferenceName\":\"총수량\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 94.54,
+          "width": 163.94,
+          "x": 593.40,
+          "y": 153.88,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"4961d5f8c9f572e11b97\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6197063566154,\"y\":308.22258055390535,\"z\":7000,\"width\":673.2230048940564,\"height\":377.7464709044103,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"날짜.날짜.변형.날짜 계층.연도\",\"active\":true},{\"queryRef\":\"날짜.날짜.변형.날짜 계층.월\",\"active\":true}],\"Y\":[{\"queryRef\":\"판매.총매출금액\"}],\"Series\":[{\"queryRef\":\"제품.분류명\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0},{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Name\":\"변형\",\"Property\":\"날짜\"}},\"Hierarchy\":\"날짜 계층\"}},\"Level\":\"연도\"},\"Name\":\"날짜.날짜.변형.날짜 계층.연도\",\"NativeReferenceName\":\"날짜 연도\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Name\":\"변형\",\"Property\":\"날짜\"}},\"Hierarchy\":\"날짜 계층\"}},\"Level\":\"월\"},\"Name\":\"날짜.날짜.변형.날짜 계층.월\",\"NativeReferenceName\":\"날짜 월\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"분류명\"},\"Name\":\"제품.분류명\",\"NativeReferenceName\":\"분류명\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"markerColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#094780'\"}}}}}}}],\"trend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'추세선 1'\"}}},\"combineSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'기간별'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 377.75,
+          "width": 673.22,
+          "x": 566.62,
+          "y": 308.22,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"4d395af8349e7d141b4d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1053.041620626151,\"y\":51.29429097605893,\"z\":2000,\"width\":187.0732965009208,\"height\":52.300061387354205,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"날짜.연도\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"날짜.연도\",\"NativeReferenceName\":\"연도\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 52.30,
+          "width": 187.07,
+          "x": 1053.04,
+          "y": 51.29,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5898975c87e9f2bb5eeb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":813.668262737876,\"y\":153.8828729281768,\"z\":4000,\"width\":167.96365868631062,\"height\":94.54241866175568,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"판매.총매출금액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 94.54,
+          "width": 167.96,
+          "x": 813.67,
+          "y": 153.88,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"795f8f51e27c680a3c35\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1259.8839232197417,\"y\":675.451076707162,\"z\":0,\"width\":20.359340964577576,\"height\":44.311506805257075,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 44.31,
+          "width": 20.36,
+          "x": 1259.88,
+          "y": 675.45,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"cbb6cf8639786644f774\",\"layouts\":[{\"id\":0,\"position\":{\"x\":40.230816451810924,\"y\":144.83093922651935,\"z\":6000,\"width\":474.72363413136895,\"height\":541.104481276857,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"거래처.거래처명\",\"active\":true},{\"queryRef\":\"제품.분류명\"},{\"queryRef\":\"제품.제품분류명\"}],\"Y\":[{\"queryRef\":\"판매.총매출금액\"}],\"Tooltips\":[{\"queryRef\":\"판매.총수량\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"거\",\"Entity\":\"거래처\",\"Type\":0},{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"거\"}},\"Property\":\"거래처명\"},\"Name\":\"거래처.거래처명\",\"NativeReferenceName\":\"거래처명\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"분류명\"},\"Name\":\"제품.분류명\",\"NativeReferenceName\":\"분류명개\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"제품분류명\"},\"Name\":\"제품.제품분류명\",\"NativeReferenceName\":\"제품분류명개\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"},\"Name\":\"판매.총수량\",\"NativeReferenceName\":\"총수량\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}},\"labelOverflow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'거래처별'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"bc08acca0992f00737e3\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"거래처\"}},\"Property\":\"거래처명\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"거\",\"Entity\":\"거래처\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"거\"}},\"Property\":\"거래처명\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"거\",\"Entity\":\"거래처\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"거\"}},\"Property\":\"거래처명\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"2aa6a9b6bcfd5141d620\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"제품\"}},\"Property\":\"분류명\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"4b5a05e5c81ca75a1bb2\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"제품\"}},\"Property\":\"제품분류명\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"6fc722887ddcb71b3598\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"판매\"}},\"Property\":\"총매출금액\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3},{\"name\":\"e93037592fce289d0afa\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"판매\"}},\"Property\":\"총수량\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":4}]",
+          "height": 541.10,
+          "width": 474.72,
+          "x": 40.23,
+          "y": 144.83,
+          "z": 6000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'문제3_5_배경.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"__3_5___8970590454584992.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"visibility\":0}",
+      "displayName": "문제3-5",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection17cbe3d6942988d011b0",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"225806a7c21c6a8bb612\",\"layouts\":[{\"id\":0,\"position\":{\"x\":40,\"y\":205.55555555555554,\"z\":2000,\"width\":272.22222222222223,\"height\":167.77777777777777}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(날짜.연도)\"},{\"queryRef\":\"판매.총매출금액\"},{\"queryRef\":\"_측정값.매출_매장\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0},{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_측정값\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"Sum(날짜.연도)\",\"NativeReferenceName\":\"연도1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"매출_매장\"},\"Name\":\"_측정값.매출_매장\",\"NativeReferenceName\":\"매출_매장\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"48.888888888888886D\"}}}},\"selector\":{\"metadata\":\"Sum(날짜.연도)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"101.22222226027881D\"}}}},\"selector\":{\"metadata\":\"판매.총매출금액\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'BoldHeader'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 167.78,
+          "width": 272.22,
+          "x": 40.00,
+          "y": 205.56,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5c6dc8ec8b3703e40622\",\"layouts\":[{\"id\":0,\"position\":{\"x\":836.6666666666666,\"y\":205.55555555555554,\"z\":0,\"width\":388.88888888888886,\"height\":371.1111111111111}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"제품.제품명\"},{\"queryRef\":\"판매.총수량\"},{\"queryRef\":\"_측정값.순위\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_측정값\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"제품명\"},\"Name\":\"제품.제품명\",\"NativeReferenceName\":\"제품명\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"},\"Name\":\"판매.총수량\",\"NativeReferenceName\":\"총수량\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"순위\"},\"Name\":\"_측정값.순위\",\"NativeReferenceName\":\"순위\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"66.33332352335736D\"}}}},\"selector\":{\"metadata\":\"판매.총수량\"}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'BoldHeader'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 371.11,
+          "width": 388.89,
+          "x": 836.67,
+          "y": 205.56,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e6f41103688303f9afda\",\"layouts\":[{\"id\":0,\"position\":{\"x\":387.77777777777777,\"y\":205.55555555555554,\"z\":1000,\"width\":390,\"height\":371.1111111111111}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(날짜.연도)\"},{\"queryRef\":\"Sum(날짜.월)\"},{\"queryRef\":\"판매.총매출금액\"},{\"queryRef\":\"_측정값.전월_매출\"},{\"queryRef\":\"_측정값.연간_누계\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_측정값\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"Sum(날짜.연도)\",\"NativeReferenceName\":\"연도1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"월\"},\"Name\":\"Sum(날짜.월)\",\"NativeReferenceName\":\"월1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"전월_매출\"},\"Name\":\"_측정값.전월_매출\",\"NativeReferenceName\":\"전월_매출\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"연간_누계\"},\"Name\":\"_측정값.연간_누계\",\"NativeReferenceName\":\"연간_누계\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'BoldHeader'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 371.11,
+          "width": 390.00,
+          "x": 387.78,
+          "y": 205.56,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"5c46e1fd4f9707b6b3ce\",\"target\":\"65e6d6ada3e38f046cd1\",\"type\":3},{\"source\":\"65e6d6ada3e38f046cd1\",\"target\":\"5c46e1fd4f9707b6b3ce\",\"type\":3}],\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'문제3_배경.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"__3___6301469467423719.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "문제3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond5c434c5f53fcc411aae",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"590ddce51e41f988aa16\",\"layouts\":[{\"id\":0,\"position\":{\"x\":670.8488643339472,\"y\":30.173112338858196,\"z\":4000,\"width\":212.21755678330263,\"height\":80.46163290362185,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"매개 변수.매개 변수\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"매\",\"Entity\":\"분석항목\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"매\"}},\"Property\":\"매개 변수\"},\"Name\":\"매개 변수.매개 변수\",\"NativeReferenceName\":\"매개 변수\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"분\",\"Entity\":\"분석항목\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"분\"}},\"Property\":\"매개 변수 필드\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'''판매''[총수량]'\"}}]]}}}]}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"분석항목\"}},\"Property\":\"매개 변수 필드\"}},\"Right\":{\"Literal\":{\"Value\":\"'''판매''[총수량]'\"}}}}},\"displayName\":\"수량\"}]}}",
+          "filters": "[]",
+          "height": 80.46,
+          "width": 212.22,
+          "x": 670.85,
+          "y": 30.17,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"5c46e1fd4f9707b6b3ce\",\"layouts\":[{\"id\":0,\"position\":{\"x\":35.201964395334564,\"y\":139.80208717004297,\"z\":3000,\"width\":577.3122160834868,\"height\":263.51184775936156,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"날짜.연도\",\"active\":true}],\"Y\":[{\"queryRef\":\"판매.총매출금액\"}],\"Y2\":[{\"queryRef\":\"판매.매출이익률\"}],\"Series\":[{\"queryRef\":\"제품.분류명\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0},{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"날짜.연도\",\"NativeReferenceName\":\"연도\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"총매출금액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"매출이익률\"},\"Name\":\"판매.매출이익률\",\"NativeReferenceName\":\"매출이익률\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"분류명\"},\"Name\":\"제품.분류명\",\"NativeReferenceName\":\"분류명\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}},{\"properties\":{\"dynamicLabelValue\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"판매\"}},\"Property\":\"총매출금액\"}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"highlightMatching\":1}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"metadata\":\"판매.매출이익률\"}}],\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'연도별'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 263.51,
+          "width": 577.31,
+          "x": 35.20,
+          "y": 139.80,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"622e89a15427cda55710\",\"layouts\":[{\"id\":0,\"position\":{\"x\":670.8488643339472,\"y\":139.80208717004297,\"z\":5000,\"width\":573.2891344383057,\"height\":264.5176181706568,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"판매.총수량\"}],\"Category\":[{\"queryRef\":\"제품.분류명\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"분류명\"},\"Name\":\"제품.분류명\",\"NativeReferenceName\":\"분류명\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"},\"Name\":\"판매.총수량\",\"NativeReferenceName\":\"수량\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총수량\"}}}]},\"queryFieldParametersByRole\":{\"Y\":[{\"index\":0,\"length\":1,\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"분석항목\"}},\"Property\":\"매개 변수\"}}}]},\"columnProperties\":{\"판매.총수량\":{\"displayName\":\"수량\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6699CC'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 264.52,
+          "width": 573.29,
+          "x": 670.85,
+          "y": 139.80,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"65e6d6ada3e38f046cd1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.76194517525248,\"y\":57.93657529208747,\"z\":1000,\"width\":173.8097258762624,\"height\":42.87306571614473,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"날짜.연도\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"날짜.연도\",\"NativeReferenceName\":\"연도\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 42.87,
+          "width": 173.81,
+          "x": 34.76,
+          "y": 57.94,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"681fcb2ebdf223b17f47\",\"layouts\":[{\"id\":0,\"position\":{\"x\":223.28103130755065,\"y\":59.34045426642112,\"z\":2000,\"width\":163.94057704112953,\"height\":42.24235727440147,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"날짜.월\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"월\"},\"Name\":\"날짜.월\",\"NativeReferenceName\":\"월\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"월\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"1L\"}}],[{\"Literal\":{\"Value\":\"3L\"}}],[{\"Literal\":{\"Value\":\"2L\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 42.24,
+          "width": 163.94,
+          "x": 223.28,
+          "y": 59.34,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"74f6befc1016223e7921\",\"layouts\":[{\"id\":0,\"position\":{\"x\":944.4184162062616,\"y\":45.25966850828729,\"z\":7000,\"width\":299.7195825659914,\"height\":50.28852056476366,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"pageNavigator\",\"drillFilterOtherVisuals\":true,\"objects\":{\"pages\":[{\"properties\":{\"showPage\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"ReportSection17cbe3d6942988d011b0\"}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6699CC'\"}}}}}},\"selector\":{\"id\":\"selected\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.29,
+          "width": 299.72,
+          "x": 944.42,
+          "y": 45.26,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"ef5a6f543ff0ba628493\",\"layouts\":[{\"id\":0,\"position\":{\"x\":40.230816451810924,\"y\":436.50435850214853,\"z\":6000,\"width\":1203.907182320442,\"height\":254.4599140577041,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"제품.분류명\",\"active\":true},{\"queryRef\":\"제품.제품분류명\",\"active\":true},{\"queryRef\":\"제품.제품명\",\"active\":true}],\"Columns\":[{\"queryRef\":\"날짜.연도\",\"active\":true},{\"queryRef\":\"날짜.월\",\"active\":true}],\"Values\":[{\"queryRef\":\"판매.총매출금액\"},{\"queryRef\":\"판매.전년동월 매출\"},{\"queryRef\":\"판매.전년대비 증감률\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"제\",\"Entity\":\"제품\",\"Type\":0},{\"Name\":\"날\",\"Entity\":\"날짜\",\"Type\":0},{\"Name\":\"판\",\"Entity\":\"판매\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"분류명\"},\"Name\":\"제품.분류명\",\"NativeReferenceName\":\"분류명\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"제품분류명\"},\"Name\":\"제품.제품분류명\",\"NativeReferenceName\":\"제품분류명\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"제\"}},\"Property\":\"제품명\"},\"Name\":\"제품.제품명\",\"NativeReferenceName\":\"제품명\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"연도\"},\"Name\":\"날짜.연도\",\"NativeReferenceName\":\"연도\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"날\"}},\"Property\":\"월\"},\"Name\":\"날짜.월\",\"NativeReferenceName\":\"월\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"총매출금액\"},\"Name\":\"판매.총매출금액\",\"NativeReferenceName\":\"당월\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"전년동월 매출\"},\"Name\":\"판매.전년동월 매출\",\"NativeReferenceName\":\"전년동월\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"판\"}},\"Property\":\"전년대비 증감률\"},\"Name\":\"판매.전년대비 증감률\",\"NativeReferenceName\":\"전년비\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"제품.분류명\"],\"isPinned\":true},{\"queryRefs\":[\"제품.제품분류명\"],\"isPinned\":true},{\"queryRefs\":[\"제품.제품명\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"판매.총매출금액\":{\"displayName\":\"당월\"},\"판매.전년동월 매출\":{\"displayName\":\"전년동월\"},\"판매.전년대비 증감률\":{\"displayName\":\"전년비\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"rowHeaders\":[{\"properties\":{\"showExpandCollapseButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"values\":[{\"properties\":{\"bandedRowHeaders\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"판매.전년대비 증감률\"}},{\"properties\":{\"icon\":{\"kind\":\"Icon\",\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Before'\"}}},\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}},\"value\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"판매\"}},\"Property\":\"전년대비 증감률\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'TriangleLow'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"판매\"}},\"Property\":\"전년대비 증감률\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'TriangleHigh'\"}}}]}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":0}}],\"metadata\":\"판매.전년대비 증감률\"}}],\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Tabular'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 254.46,
+          "width": 1203.91,
+          "x": 40.23,
+          "y": 436.50,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f7a010b607ed097b0b6a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1259.6406590354225,\"y\":675.451076707162,\"z\":0,\"width\":20.359340964577576,\"height\":44.311506805257075,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 44.31,
+          "width": 20.36,
+          "x": 1259.64,
+          "y": 675.45,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Test16773052064068437.json"
+}
