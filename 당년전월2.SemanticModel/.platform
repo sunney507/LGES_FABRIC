@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "당년전월2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "10f9c634-6b2d-4232-8bbe-7ae4c46c2b15"
+  }
+}
