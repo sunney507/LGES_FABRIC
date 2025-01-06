@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "엑셀 새로고침 테스트"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "07e619c0-48ed-4345-9a89-3b5e318c2c55"
+  }
+}

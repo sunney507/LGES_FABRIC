@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../엑셀 새로고침 테스트.SemanticModel"
+    },
+    "byConnection": null
+  }
+}
