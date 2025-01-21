@@ -1,0 +1,29 @@
+model Model
+	culture: ko-KR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ko-KR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Dim_customer","Dim_geography","Dim_product","Dim_reseller","Dim_store","Fact_sales"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dim_customer
+ref table DateTableTemplate_27003421-57e4-4189-b1b3-1e8dbed37f84
+ref table Dim_geography
+ref table Dim_product
+ref table Dim_reseller
+ref table Dim_store
+ref table Fact_sales
+ref table Dim_Date
+
+ref role Warehouse
+
+ref cultureInfo ko-KR
+

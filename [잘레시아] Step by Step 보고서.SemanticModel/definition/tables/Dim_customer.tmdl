@@ -1,0 +1,93 @@
+table Dim_customer
+	lineageTag: 80d5a9f6-a987-41d5-b9a7-237d46250923
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 464778f0-581b-4f48-a72a-ceea0d930552
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: f55e3e01-8f6e-44a7-8f73-5b657c4d4c81
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: string
+		lineageTag: a5783ae3-09f6-4be7-a909-0cc3711387f3
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 2aa9b8f7-60e7-4164-81ea-0453277cab29
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishEducation
+		dataType: string
+		lineageTag: 7b83f649-32eb-4f7b-85d2-5eb70417de9e
+		summarizeBy: none
+		sourceColumn: EnglishEducation
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishOccupation
+		dataType: string
+		lineageTag: fe5c12e1-014b-489a-ac58-2004368f020a
+		summarizeBy: none
+		sourceColumn: EnglishOccupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column HouseOwnerFlag
+		dataType: string
+		lineageTag: a621b0c2-edd9-4abe-a0b8-116384a3da56
+		summarizeBy: none
+		sourceColumn: HouseOwnerFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberCarsOwned
+		dataType: string
+		lineageTag: 2edb065d-60be-45e5-8777-66a0119b8769
+		summarizeBy: none
+		sourceColumn: NumberCarsOwned
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		lineageTag: 084452dd-401e-4d7a-9681-bd806ec82ee5
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_customer = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Dim_customer_Sheet = 원본{[Item="Dim_customer",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Dim_customer_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"CustomerKey", Int64.Type}, {"Name", type text}, {"BirthDate", type any}, {"Gender", type text}, {"EnglishEducation", type text}, {"EnglishOccupation", type text}, {"HouseOwnerFlag", type any}, {"NumberCarsOwned", type any}, {"AddressLine1", type text}}),
+				    #"바꾼 값" = Table.ReplaceValue(#"변경된 유형",-1,null,Replacer.ReplaceValue,{"CustomerKey"}),
+				    #"필터링된 행" = Table.SelectRows(#"바꾼 값", each [CustomerKey] <> null and [CustomerKey] <> "")
+				in
+				    #"필터링된 행"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = 탐색
+

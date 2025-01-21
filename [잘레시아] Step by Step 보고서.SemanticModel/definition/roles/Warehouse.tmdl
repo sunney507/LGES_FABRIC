@@ -1,0 +1,9 @@
+role Warehouse
+	modelPermission: read
+
+	tablePermission Dim_customer = [AddressLine1] == "Dc"
+
+	tablePermission Dim_reseller = [BusinessType] == "Warehouse"
+
+	annotation PBI_Id = f09f287f98604da6baa9ddd69d7b3709
+

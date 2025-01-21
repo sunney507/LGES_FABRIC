@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../[잘레시아] Step by Step 보고서.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

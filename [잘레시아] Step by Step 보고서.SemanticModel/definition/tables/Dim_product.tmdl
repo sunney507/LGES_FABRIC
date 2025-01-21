@@ -1,0 +1,123 @@
+table Dim_product
+	lineageTag: a391c2d7-e02d-44d6-8016-5f4a5faf7c3f
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f481fcfa-c469-4c69-b756-9c3b7e6d7671
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductAlternateKey
+		dataType: string
+		lineageTag: c98281df-33d8-49bc-8c0f-ff9899754e13
+		summarizeBy: none
+		sourceColumn: ProductAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategory
+		dataType: string
+		lineageTag: 43054633-28da-4735-9029-aee81d6785ca
+		summarizeBy: none
+		sourceColumn: ProductSubcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategory
+		dataType: string
+		lineageTag: 14ca5457-7ebf-4e55-9f57-abead7c92d09
+		summarizeBy: none
+		sourceColumn: ProductCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 96577472-aeba-4e54-974e-5bd4ede43211
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: string
+		lineageTag: 2d60129e-4c17-4c46-8be9-04b56fd0da96
+		summarizeBy: none
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 4c8c0939-8c99-4210-a9be-b0a765d5bd6b
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: string
+		lineageTag: 5db43504-48f3-4c94-a730-be9bef2f207d
+		summarizeBy: none
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelName
+		dataType: string
+		lineageTag: 8d0bc679-e93f-41d3-8f8b-36aa6f1f8ae8
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishDescription
+		dataType: string
+		lineageTag: cc94cbc2-dba9-403e-9f3e-7396c5d3e119
+		summarizeBy: none
+		sourceColumn: EnglishDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 9801ddc2-aa0f-4a70-9552-c88b574b9ee0
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column '처음 문자'
+		dataType: string
+		lineageTag: 68f71b48-2324-43f5-a999-d55f68880eb0
+		summarizeBy: none
+		sourceColumn: 처음 문자
+
+		annotation SummarizationSetBy = Automatic
+
+	column 추출열
+		dataType: string
+		lineageTag: 38ecac14-eec9-4806-9e0c-0ec407859b76
+		summarizeBy: none
+		sourceColumn: 추출열
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_product = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Dim_product_Sheet = 원본{[Item="Dim_product",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Dim_product_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"ProductKey", Int64.Type}, {"ProductAlternateKey", type text}, {"ProductSubcategory", type text}, {"ProductCategory", type text}, {"ProductName", type text}, {"StandardCost", type text}, {"Color", type text}, {"Weight", type any}, {"ModelName", type text}, {"EnglishDescription", type text}, {"Status", type text}}),
+				    #"삽입된 처음 문자" = Table.AddColumn(#"변경된 유형", "처음 문자", each Text.Start([Color], 1), type text),
+				    #"삽입된 병합된 열" = Table.AddColumn(#"삽입된 처음 문자", "추출열", each Text.Combine({[ProductCategory], [ProductSubcategory]}, "-"), type text)
+				in
+				    #"삽입된 병합된 열"
+
+	annotation PBI_ResultType = Table
+

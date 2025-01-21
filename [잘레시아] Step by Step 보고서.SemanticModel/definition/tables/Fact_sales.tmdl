@@ -1,0 +1,160 @@
+table Fact_sales
+	lineageTag: dc1203bf-7568-4a3e-81cd-c592bbb3ecb7
+
+	measure 매출액 = SUM('Fact_sales'[SalesAmount])
+		formatString: #,0
+		lineageTag: 0b050deb-de1d-4131-92a0-2950742c901e
+
+	measure 전월매출액 = CALCULATE([매출액], DATEADD('Dim_Date'[Date], -1, MONTH))
+		formatString: #,0
+		lineageTag: 35374ec6-0f18-4d87-b228-8066c4471bce
+
+	measure 매출액차이 = [매출액]-[전월매출액]
+		formatString: #,0
+		lineageTag: 4718af6a-6aaf-4bd4-8b5a-d06b8f7c4f60
+
+	measure 동적타이틀 =
+			IF(ISBLANK(SELECTEDVALUE('Dim_product'[ProductCategory]))
+			                ,"Sales Detail"
+			                , "'" & SELECTEDVALUE('Dim_product'[ProductCategory]) & "' - Sales Detail")
+		lineageTag: bb225561-9cc6-48ac-bd6f-0a971701a7e8
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ed032f95-44ff-4dd6-8e3e-b87d1f4e5bb0
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1450af7b-57df-49e6-b3c3-c4ff47ee6a79
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4350f256-d8b6-44fd-8724-fa49406a3aea
+		summarizeBy: none
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 877eac8e-c1ce-45fe-a0ce-c4f9e51dd251
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6772fa1c-8ed2-46f2-8862-c63efd6eab6a
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: ed7f5d18-44c8-4646-b8d1-1fb8501fcab9
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExtendedAmount
+		dataType: double
+		lineageTag: f930c78c-c5da-4f40-8e68-d463aa691581
+		summarizeBy: sum
+		sourceColumn: ExtendedAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductStandardCost
+		dataType: double
+		lineageTag: 69e98170-0ee0-4182-b9c1-c21df7efb096
+		summarizeBy: sum
+		sourceColumn: ProductStandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalProductCost
+		dataType: double
+		lineageTag: 2747807d-c758-43fc-b427-eca28d4f7d42
+		summarizeBy: sum
+		sourceColumn: TotalProductCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: d33e1542-4b36-4577-9e28-8547738b0fb8
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxAmt
+		dataType: double
+		lineageTag: 9afc7acd-356b-4cd4-8ac5-581fe0705905
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 상중하
+		dataType: string
+		lineageTag: 19dadbcd-2c33-4c82-9b6e-cc1622b69dfd
+		summarizeBy: none
+		sourceColumn: 상중하
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 5fef4691-f9de-4da8-b85a-4255d9c999a9
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_sales = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Fact_sales_Sheet = 원본{[Item="Fact_sales",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Fact_sales_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"ProductKey", Int64.Type}, {"OrderDateKey", Int64.Type}, {"StoreKey", Int64.Type}, {"CustomerKey", Int64.Type}, {"ResellerKey", Int64.Type}, {"UnitPrice", type number}, {"ExtendedAmount", type number}, {"ProductStandardCost", type number}, {"TotalProductCost", type number}, {"SalesAmount", type number}, {"TaxAmt", type number}}),
+				    반올림 = Table.TransformColumns(#"변경된 유형",{{"UnitPrice", each Number.Round(_, 0), type number}, {"ExtendedAmount", each Number.Round(_, 0), type number}, {"ProductStandardCost", each Number.Round(_, 0), type number}, {"TotalProductCost", each Number.Round(_, 0), type number}, {"SalesAmount", each Number.Round(_, 0), type number}, {"TaxAmt", each Number.Round(_, 0), type number}}),
+				    #"추가된 사용자 지정 항목" = Table.AddColumn(반올림, "상중하", each if [SalesAmount] <= 1000 then "C" else if [SalesAmount] <= 3500 then "B" else if [SalesAmount] > 3500 then "A" else [SalesAmount]),
+				    #"병합된 쿼리" = Table.NestedJoin(#"추가된 사용자 지정 항목", {"CustomerKey"}, Dim_customer, {"CustomerKey"}, "Dim_customer", JoinKind.LeftOuter),
+				    #"확장된 Dim_customer" = Table.ExpandTableColumn(#"병합된 쿼리", "Dim_customer", {"Gender"}, {"Gender"})
+				in
+				    #"확장된 Dim_customer"
+
+	annotation PBI_ResultType = Table
+

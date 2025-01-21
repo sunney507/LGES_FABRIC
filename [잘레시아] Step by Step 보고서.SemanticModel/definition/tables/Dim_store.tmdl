@@ -1,0 +1,50 @@
+table Dim_store
+	lineageTag: a2e66629-cb1d-4cc4-9d72-e75efe8e6cda
+
+	column StoreKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 88d1c8ab-d355-422b-b1e2-41db1a599759
+		summarizeBy: none
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: bcc7e62d-7de4-4884-b187-94ba0cc32970
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreType
+		dataType: string
+		lineageTag: a0a43df5-0f86-4ecd-8b75-a93d86d7f24f
+		summarizeBy: none
+		sourceColumn: StoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreName
+		dataType: string
+		lineageTag: d5f9ab57-f497-4c52-bf0d-c72be1df3db6
+		summarizeBy: none
+		sourceColumn: StoreName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_store = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Dim_store_Sheet = 원본{[Item="Dim_store",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Dim_store_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"StoreKey", Int64.Type}, {"GeographyKey", Int64.Type}, {"StoreType", type text}, {"StoreName", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+

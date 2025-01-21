@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "[잘레시아] Step by Step 보고서"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "85407aae-3590-87a7-46ac-e0162fadfd95"
+  }
+}

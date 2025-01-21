@@ -1,0 +1,297 @@
+{
+  "config": "{\"version\":\"5.55\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU06\",\"version\":\"5.56\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleTidal\",\"version\":\"5.56\",\"type\":2}},\"activeSectionIndex\":0,\"bookmarks\":[{\"displayName\":\"필터 on\",\"name\":\"59ae3d55c27a912c2d36\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"0b737984de447d1d9927\",\"sections\":{\"0b737984de447d1d9927\":{\"filters\":{\"byExpr\":[{\"name\":\"Filter71bcdb5648a3fe9f2575\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategory\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bikes'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"howCreated\":5}],\"byTransientState\":[{\"name\":\"transientFilter\",\"type\":\"Advanced\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Date\"}},\"Property\":\"Month\"}},\"howCreated\":5,\"isTransient\":true},{\"name\":\"transientFilter1\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductSubcategory\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Mountain Bikes'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}},\"howCreated\":5,\"isTransient\":true},{\"name\":\"transientFilter2\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2022-01'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Date\"}},\"Property\":\"Month\"}},\"howCreated\":5,\"isTransient\":true}]},\"visualContainers\":{\"473d0eedd83e50cd5449\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"Function\":3}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{}}},\"4b27811673e980b0609d\":{\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{}}},\"276b9e00785aa0638899\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"Color\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"Color\"}}]}}},\"154af85115e5e8000033\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"donutChart\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}}]}}},\"044bf6705d2a3b98a113\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BusinessType\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"pivotTable\",\"objects\":{},\"activeProjections\":{\"Rows\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}}],\"Columns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BusinessType\"}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim_product.ProductCategory\"],\"isPinned\":true},{\"queryRefs\":[\"Dim_product.ProductSubcategory\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}]}},\"f87c435f8a0b2c7c52d2\":{\"singleVisual\":{\"visualType\":\"image\",\"objects\":{}}},\"dada9e60654d28f3c981\":{\"singleVisual\":{\"visualType\":\"image\",\"objects\":{}}},\"84fc399d0986afdfec84\":{\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{}}},\"464c88a6efdba3ca8b2d\":{\"singleVisual\":{\"visualType\":\"actionButton\",\"objects\":{}}},\"b80fced60be37d5fd128\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BankName\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}},\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BankName\"}}]}}}},\"visualContainerGroups\":{\"cce187e9302d2529f1a5\":{\"isHidden\":false}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}},\"options\":{\"targetVisualNames\":[],\"suppressData\":true}},{\"displayName\":\"필터 off\",\"name\":\"f3cbf12cf64f358ca926\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"0b737984de447d1d9927\",\"sections\":{\"0b737984de447d1d9927\":{\"filters\":{\"byExpr\":[{\"name\":\"Filter71bcdb5648a3fe9f2575\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategory\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bikes'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"howCreated\":5}],\"byTransientState\":[{\"name\":\"transientFilter\",\"type\":\"Advanced\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Date\"}},\"Property\":\"Month\"}},\"howCreated\":5,\"isTransient\":true},{\"name\":\"transientFilter1\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductSubcategory\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Mountain Bikes'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}},\"howCreated\":5,\"isTransient\":true},{\"name\":\"transientFilter2\",\"type\":\"Categorical\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2022-01'\"}}]]}}}]},\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Date\"}},\"Property\":\"Month\"}},\"howCreated\":5,\"isTransient\":true}]},\"visualContainers\":{\"473d0eedd83e50cd5449\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"Function\":3}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{}}},\"4b27811673e980b0609d\":{\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{}}},\"276b9e00785aa0638899\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"Color\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"Color\"}}]}}},\"154af85115e5e8000033\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"donutChart\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}}]}}},\"044bf6705d2a3b98a113\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Header\"}},\"Property\":\"매출액\"}},\"howCreated\":0},{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BusinessType\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"pivotTable\",\"objects\":{},\"activeProjections\":{\"Rows\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}}],\"Columns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BusinessType\"}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim_product.ProductCategory\"],\"isPinned\":true},{\"queryRefs\":[\"Dim_product.ProductSubcategory\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}]}},\"f87c435f8a0b2c7c52d2\":{\"singleVisual\":{\"visualType\":\"image\",\"objects\":{}}},\"dada9e60654d28f3c981\":{\"singleVisual\":{\"visualType\":\"image\",\"objects\":{}}},\"84fc399d0986afdfec84\":{\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{}}},\"464c88a6efdba3ca8b2d\":{\"singleVisual\":{\"visualType\":\"actionButton\",\"objects\":{}}},\"b80fced60be37d5fd128\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BankName\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}},\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BankName\"}}]}}}},\"visualContainerGroups\":{\"cce187e9302d2529f1a5\":{\"isHidden\":true}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}},\"options\":{\"targetVisualNames\":[],\"suppressData\":true}}],\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true,\"filterPaneHiddenInEditMode\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "0b737984de447d1d9927",
+      "config": "{}",
+      "name": "55f563b20780ee9b4737",
+      "parameters": "[{\"name\":\"Param_Filter71bcdb5648a3fe9f2575\",\"boundFilter\":\"Filter71bcdb5648a3fe9f2575\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "f45d167c5cc4abae97aa",
+      "config": "{}",
+      "name": "c3fa5cf08ab26173ba52",
+      "parameters": "[{\"name\":\"Param_Filterdbfbd093cdae1dd40945\",\"boundFilter\":\"Filterdbfbd093cdae1dd40945\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}}}]",
+      "type": 2
+    }
+  ],
+  "publicCustomVisuals": [
+    "ChicletSlicer1448559807354"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleTidal",
+            "path": "BuiltInThemes/AccessibleTidal.json",
+            "type": 201
+          },
+          {
+            "name": "CY24SU06",
+            "path": "BaseThemes/CY24SU06.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "chemistry12134620838286558.png",
+            "path": "chemistry12134620838286558.png",
+            "type": 100
+          },
+          {
+            "name": "logout9509228035220658.png",
+            "path": "logout9509228035220658.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "드릴스루 - 상세",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter71bcdb5648a3fe9f2575\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategory\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Bikes'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "0b737984de447d1d9927",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"044bf6705d2a3b98a113\",\"layouts\":[{\"id\":0,\"position\":{\"x\":712.0854511970534,\"y\":401.302394106814,\"z\":6000,\"width\":568.2602823818294,\"height\":311.7888275015347,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim_product.ProductCategory\",\"active\":true},{\"queryRef\":\"Dim_product.ProductSubcategory\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Dim_reseller.BusinessType\",\"active\":true}],\"Values\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim_reseller\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductSubcategory\"},\"Name\":\"Dim_product.ProductSubcategory\",\"NativeReferenceName\":\"ProductSubcategory\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategory\"},\"Name\":\"Dim_product.ProductCategory\",\"NativeReferenceName\":\"ProductCategory\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"BusinessType\"},\"Name\":\"Dim_reseller.BusinessType\",\"NativeReferenceName\":\"BusinessType\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim_product.ProductCategory\"],\"isPinned\":true},{\"queryRefs\":[\"Dim_product.ProductSubcategory\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Compact'\"}}}}}],\"grid\":[{\"properties\":{\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#999999'\"}}}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#999999'\"}}}}},\"rowPadding\":{\"expr\":{\"Literal\":{\"Value\":\"3D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#ffffff'\"}}}}}}}],\"subTotals\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F7F5EB'\"}}}}},\"applyToHeaders\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"Row\"}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"89.17073839488793D\"}}}},\"selector\":{\"data\":[{\"total\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"BusinessType\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Default'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 311.79,
+          "width": 568.26,
+          "x": 712.09,
+          "y": 401.30,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"154af85115e5e8000033\",\"layouts\":[{\"id\":0,\"position\":{\"x\":281.6157151626765,\"y\":401.302394106814,\"z\":5000,\"width\":403.3139349294045,\"height\":318.8292203806016,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_geography.ContinentName\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_geography\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ContinentName\"},\"Name\":\"Dim_geography.ContinentName\",\"NativeReferenceName\":\"ContinentName\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 318.83,
+          "width": 403.31,
+          "x": 281.62,
+          "y": 401.30,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"276b9e00785aa0638899\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.115408225905462,\"y\":259.48876611418046,\"z\":4000,\"width\":231.32719459791284,\"height\":453.6024554941682,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_product.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"Dim_product\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Color\"},\"Name\":\"Dim_product.Color\",\"NativeReferenceName\":\"Color\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter8f226062855c8fb44d0f\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"Color\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Black'\"}}],[{\"Literal\":{\"Value\":\"'Blue'\"}}],[{\"Literal\":{\"Value\":\"'Silver'\"}}],[{\"Literal\":{\"Value\":\"'Yellow'\"}}],[{\"Literal\":{\"Value\":\"'Red'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 453.60,
+          "width": 231.33,
+          "x": 20.12,
+          "y": 259.49,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"464c88a6efdba3ca8b2d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":8000,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"473d0eedd83e50cd5449\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.098096992019645,\"y\":114.65782688766114,\"z\":3000,\"width\":231.32719459791284,\"height\":88.50779619398403,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6895B9'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 88.51,
+          "width": 231.33,
+          "x": 17.10,
+          "y": 114.66,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"4b27811673e980b0609d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":90.51933701657458,\"z\":2000,\"width\":265.52338858195213,\"height\":629.612277470841,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 629.61,
+          "width": 265.52,
+          "x": 0.00,
+          "y": 90.52,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5b71600c530ab9d47775\",\"layouts\":[{\"id\":0,\"position\":{\"x\":265.52338858195213,\"y\":102.58858195211786,\"z\":1000,\"width\":1013.8165745856354,\"height\":257.47722529158995,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Fact_sales.매출액\"}],\"Y2\":[{\"queryRef\":\"Fact_sales.전월매출액\"}],\"Category\":[{\"queryRef\":\"Dim_reseller.ResellerName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"전월매출액\"},\"Name\":\"Fact_sales.전월매출액\",\"NativeReferenceName\":\"전월매출액\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ResellerName\"},\"Name\":\"Dim_reseller.ResellerName\",\"NativeReferenceName\":\"ResellerName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_reseller\"}},\"Property\":\"ResellerName\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ResellerName\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ResellerName\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 257.48,
+          "width": 1013.82,
+          "x": 265.52,
+          "y": 102.59,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"84fc399d0986afdfec84\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":284.77611940298505,\"height\":183.5820895522388,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"parentGroupName\":\"cce187e9302d2529f1a5\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 183.58,
+          "width": 284.78,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b80fced60be37d5fd128\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.515356348954356,\"y\":54.8065145397632,\"z\":2000,\"width\":242.18844984802433,\"height\":72.94832826747721,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_reseller.BankName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BankName\"},\"Name\":\"Dim_reseller.BankName\",\"NativeReferenceName\":\"BankName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BankName\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'International Security'\"}}]]}}}]}}}}]}},\"parentGroupName\":\"cce187e9302d2529f1a5\"}",
+          "filters": "[]",
+          "height": 72.95,
+          "width": 242.19,
+          "x": 20.52,
+          "y": 54.81,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"cce187e9302d2529f1a5\",\"layouts\":[{\"id\":0,\"position\":{\"height\":183.5820895522388,\"width\":284.77611940298493,\"x\":994.9253731343283,\"y\":15.223880597014926,\"z\":9000,\"tabOrder\":7000}}],\"singleVisualGroup\":{\"displayName\":\"그룹 1\",\"groupMode\":0,\"isHidden\":true}}",
+          "height": 183.58,
+          "width": 284.78,
+          "x": 994.93,
+          "y": 15.22,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"d421ca8b9a6146fde316\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.3399631675875,\"height\":90.51933701657458,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_sales.동적타이틀\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"동적타이틀\"},\"Name\":\"Fact_sales.동적타이틀\",\"NativeReferenceName\":\"동적타이틀\"}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.5}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.52,
+          "width": 1279.34,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dada9e60654d28f3c981\",\"layouts\":[{\"id\":0,\"position\":{\"x\":228.35820895522397,\"y\":8.059701492537311,\"z\":1000,\"width\":48.35820895522388,\"height\":44.776119402985074,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"logout9509228035220658.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Bookmark'\"}}},\"bookmark\":{\"expr\":{\"Literal\":{\"Value\":\"'f3cbf12cf64f358ca926'\"}}}}}]}},\"parentGroupName\":\"cce187e9302d2529f1a5\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.78,
+          "width": 48.36,
+          "x": 228.36,
+          "y": 8.06,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f87c435f8a0b2c7c52d2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1223.0168201350523,\"y\":9.05193370165746,\"z\":7000,\"width\":45.25966850828729,\"height\":45.25966850828729,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"chemistry12134620838286558.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Bookmark'\"}}},\"bookmark\":{\"expr\":{\"Literal\":{\"Value\":\"'59ae3d55c27a912c2d36'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 45.26,
+          "width": 45.26,
+          "x": 1223.02,
+          "y": 9.05,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "품목별매출",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "49dd5c78d121610d7c76",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2a86073b6cb89ddc9e55\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1046.0012277470842,\"y\":12.069244935543278,\"z\":5000,\"width\":221.2694904849601,\"height\":72.41546961325967,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_geography.RegionCountryName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_geography\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"RegionCountryName\"},\"Name\":\"Dim_geography.RegionCountryName\",\"NativeReferenceName\":\"RegionCountryName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"items\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 72.42,
+          "width": 221.27,
+          "x": 1046.00,
+          "y": 12.07,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"2f765fdd9e1c2a7862d4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.086556169429098,\"y\":132.76169429097607,\"z\":1000,\"width\":1252.184162062615,\"height\":587.3699201964396,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim_product.ProductCategory\",\"active\":true},{\"queryRef\":\"Dim_product.ProductSubcategory\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Dim_Date.Month\",\"active\":true}],\"Values\":[{\"queryRef\":\"Fact_sales.매출액\"},{\"queryRef\":\"Fact_sales.전월매출액\"},{\"queryRef\":\"Fact_sales.매출액차이\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dim_Date\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategory\"},\"Name\":\"Dim_product.ProductCategory\",\"NativeReferenceName\":\"ProductCategory\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductSubcategory\"},\"Name\":\"Dim_product.ProductSubcategory\",\"NativeReferenceName\":\"ProductSubcategory\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Month\"},\"Name\":\"Dim_Date.Month\",\"NativeReferenceName\":\"Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"전월매출액\"},\"Name\":\"Fact_sales.전월매출액\",\"NativeReferenceName\":\"전월매출액\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액차이\"},\"Name\":\"Fact_sales.매출액차이\",\"NativeReferenceName\":\"매출액차이\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim_product.ProductCategory\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductCategory\"}}],\"isPinned\":true},{\"queryRefs\":[\"Dim_product.ProductSubcategory\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_product\"}},\"Property\":\"ProductSubcategory\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"rowPadding\":{\"expr\":{\"Literal\":{\"Value\":\"3D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#999999'\"}}}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#999999'\"}}}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"titleAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"subTotals\":[{\"properties\":{\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"applyToHeaders\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F7F5EB'\"}}}}}},\"selector\":{\"id\":\"Row\"}}],\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Compact'\"}}}}}],\"values\":[{\"properties\":{\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'품목별 매출'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Default'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 587.37,
+          "width": 1252.18,
+          "x": 15.09,
+          "y": 132.76,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"627c578c74bc820ab8ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":830.7663597298956,\"y\":12.069244935543278,\"z\":4000,\"width\":204.17139349294047,\"height\":72.41546961325967,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Date.Year\",\"active\":true},{\"queryRef\":\"Dim_Date.Month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"},\"Name\":\"Dim_Date.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month\"},\"Name\":\"Dim_Date.Month\",\"NativeReferenceName\":\"Month\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Dim_Date.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Date\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"Dim_Date.Month\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2023L\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"items\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 72.42,
+          "width": 204.17,
+          "x": 830.77,
+          "y": 12.07,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"93b442ccb43d1a579e25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.3457335788828,\"height\":92.53087783916513,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.5}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#6895B9'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales Dashboard'\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"30L\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 92.53,
+          "width": 1280.35,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"caf2a5e2a4287e5a9de8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1120.4282381829344,\"y\":103.59435236341314,\"z\":3000,\"width\":146.8424800491099,\"height\":29.167341927562923,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'clearAllSlicers'\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'모든 슬라이서 지우기'\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'ClearAllSlicers'\"}}},\"tooltipPlaceholderText\":{\"expr\":{\"Literal\":{\"Value\":\"'이 페이지의 모든 슬라이서 지우기'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 29.17,
+          "width": 146.84,
+          "x": 1120.43,
+          "y": 103.59,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{},\"type\":1}",
+      "displayName": "툴팁",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterdbfbd093cdae1dd40945\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_geography\"}},\"Property\":\"ContinentName\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 600.00,
+      "name": "f45d167c5cc4abae97aa",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"27383c5b1ee100162a01\",\"layouts\":[{\"id\":0,\"position\":{\"x\":67.91044776119402,\"y\":358.955223880597,\"z\":5000,\"width\":563.4328358208954,\"height\":223.13432835820893,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_product.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_product\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"Dim_product.Color\",\"NativeReferenceName\":\"Color\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 223.13,
+          "width": 563.43,
+          "x": 67.91,
+          "y": 358.96,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"acd4e820019d92289b6d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":67.6923076923077,\"y\":134.6153846153846,\"z\":3000,\"width\":553.0769230769231,\"height\":198.46153846153845,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_reseller.BusinessType\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_sales.매출액\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dim_reseller\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Fact_sales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BusinessType\"},\"Name\":\"Dim_reseller.BusinessType\",\"NativeReferenceName\":\"BusinessType\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"},\"Name\":\"Fact_sales.매출액\",\"NativeReferenceName\":\"매출액\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"매출액\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"funnelLabelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Data'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 198.46,
+          "width": 553.08,
+          "x": 67.69,
+          "y": 134.62,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"edbc89712a12c60003ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.80597014925372,\"y\":33.134328358208954,\"z\":1000,\"width\":489.8507462686567,\"height\":71.64179104477611,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Sales Dashboard Detail\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"32pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 71.64,
+          "width": 489.85,
+          "x": 78.81,
+          "y": 33.13,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fadfca9b06b27272c2aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.70149253731343,\"y\":104.77611940298507,\"z\":2000,\"width\":600.8955223880597,\"height\":17.91044776119403,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 17.91,
+          "width": 600.90,
+          "x": 19.70,
+          "y": 104.78,
+          "z": 2000.00
+        }
+      ],
+      "width": 700.00
+    }
+  ],
+  "theme": "AccessibleTidal"
+}

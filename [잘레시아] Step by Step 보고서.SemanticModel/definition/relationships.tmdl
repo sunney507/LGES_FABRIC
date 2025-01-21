@@ -1,0 +1,24 @@
+relationship AutoDetected_66500435-dfe6-4aef-8b57-dbb35944e372
+	fromColumn: Fact_sales.CustomerKey
+	toColumn: Dim_customer.CustomerKey
+
+relationship AutoDetected_e81ded69-efa6-4607-bc0f-c25a3995dca8
+	fromColumn: Dim_store.GeographyKey
+	toColumn: Dim_geography.GeographyKey
+
+relationship 53d48ed9-be40-44e5-de7f-19090fe49d15
+	fromColumn: Fact_sales.OrderDateKey
+	toColumn: Dim_Date.Date_Key
+
+relationship 3e0e24c1-3f06-fe6a-f6a6-591778df01e1
+	fromColumn: Fact_sales.StoreKey
+	toColumn: Dim_store.StoreKey
+
+relationship 040ee3fc-2c11-6698-3220-466f34c04f83
+	fromColumn: Fact_sales.ProductKey
+	toColumn: Dim_product.ProductKey
+
+relationship c6fd5ab6-11d9-6e03-0e72-9d295f5aab93
+	fromColumn: Fact_sales.ResellerKey
+	toColumn: Dim_reseller.ResellerKey
+

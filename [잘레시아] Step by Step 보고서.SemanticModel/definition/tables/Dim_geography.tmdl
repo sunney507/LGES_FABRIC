@@ -1,0 +1,81 @@
+table Dim_geography
+	lineageTag: 70704657-8826-40c5-a2b1-73eddc38c23d
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a262d90a-4e60-491c-9ab2-296093b58ff5
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyType
+		dataType: string
+		lineageTag: a5da05d4-cfca-4192-bf7a-815ce9ce71a9
+		summarizeBy: none
+		sourceColumn: GeographyType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContinentName
+		dataType: string
+		lineageTag: fee742f0-5ffa-45ce-9c97-0046de47ff70
+		summarizeBy: none
+		sourceColumn: ContinentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityName
+		dataType: string
+		lineageTag: c768c98d-3785-4e93-9535-fdd8b390a8ba
+		summarizeBy: none
+		sourceColumn: CityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceName
+		dataType: string
+		lineageTag: 03ef01c1-7ce7-4458-ab4c-9737d3b6871a
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionCountryName
+		dataType: string
+		lineageTag: 506c84fb-eea7-4f76-86a0-445ddb15614e
+		summarizeBy: none
+		sourceColumn: RegionCountryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionCountryName_KOR
+		dataType: string
+		lineageTag: 2bf54dd2-e48a-4445-b7de-e2811562e1ae
+		summarizeBy: none
+		sourceColumn: RegionCountryName_KOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContinentName_KOR
+		dataType: string
+		lineageTag: 476158ee-db82-4570-8916-2644ff2c903b
+		summarizeBy: none
+		sourceColumn: ContinentName_KOR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_geography = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Dim_geography_Sheet = 원본{[Item="Dim_geography",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Dim_geography_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"GeographyKey", Int64.Type}, {"GeographyType", type text}, {"ContinentName", type text}, {"CityName", type text}, {"StateProvinceName", type text}, {"RegionCountryName", type text}, {"RegionCountryName_KOR", type text}, {"ContinentName_KOR", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+

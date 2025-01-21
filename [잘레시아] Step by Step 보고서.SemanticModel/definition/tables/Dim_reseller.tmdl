@@ -1,0 +1,90 @@
+table Dim_reseller
+	lineageTag: 5c24314a-a9f9-4663-89e1-1a99f1eed58c
+
+	column ResellerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d1563bb-3fd8-4c9d-b7a7-0c9315fa76cb
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 1475d3e9-11ea-4462-8b23-d644ec3244b4
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessType
+		dataType: string
+		lineageTag: 320c5fae-bbae-42e3-a291-44834bf0e94f
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerName
+		dataType: string
+		lineageTag: 52487dba-77c8-4e5f-a82a-7f97efd024c4
+		summarizeBy: none
+		sourceColumn: ResellerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ecca435-54c3-4ff0-9c79-113bf7b4ee5c
+		summarizeBy: none
+		sourceColumn: NumberEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderFrequency
+		dataType: string
+		lineageTag: 17ed65b6-6f2a-40f4-82ff-2454aacc7558
+		summarizeBy: none
+		sourceColumn: OrderFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		lineageTag: c29b0e64-00a1-4a51-91b9-04ecf917cc66
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		lineageTag: 08f8afa9-7583-4781-8c31-566fcc0df259
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+	column BankName
+		dataType: string
+		lineageTag: e21319c9-4ad1-4660-a01a-a2d85796f8e5
+		summarizeBy: none
+		sourceColumn: BankName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_reseller = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\sunne\OneDrive - Zalesia Inc\바탕 화면\교육대비\본사교육\[잘레시아] 교육용 데이터.xlsx"), null, true),
+				    Dim_reseller_Sheet = 원본{[Item="Dim_reseller",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Dim_reseller_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"ResellerKey", Int64.Type}, {"Phone", type text}, {"BusinessType", type text}, {"ResellerName", type text}, {"NumberEmployees", Int64.Type}, {"OrderFrequency", type text}, {"AddressLine1", type text}, {"AddressLine2", type text}, {"BankName", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+

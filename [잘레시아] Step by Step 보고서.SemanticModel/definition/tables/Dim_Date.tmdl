@@ -1,0 +1,53 @@
+table Dim_Date
+	lineageTag: 6f7580c5-ce65-4f36-9696-d8314079f33d
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 3e37999d-33be-4911-8408-df3cfded6d98
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = YEAR([Date]) & "-" & FORMAT([Date], "MM")
+		lineageTag: 52dafa29-09f5-4a48-aeb2-05adeb5165c4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_Key = FORMAT('Dim_Date'[Date], "YYYYMMDD")
+		lineageTag: f3f272d1-6d1a-4421-a681-789074af4518
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR([Date])
+		formatString: 0
+		lineageTag: c79ff657-be79-4e16-835e-ed5128f62dd3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 월 = MONTH([Date]) & "월"
+		lineageTag: 7a85c7a1-7f51-41f5-a255-7f47ec5ecc11
+		summarizeBy: none
+		sortByColumn: Month2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month2 = MONTH([Date])
+		formatString: 0
+		lineageTag: b2b301f3-9a91-443d-8ecc-da2dce024d8a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = calculated
+		mode: import
+		source = CALENDAR(DATE(2022,01,01), DATE(2024,12,31))
+
+	annotation PBI_Id = 289669eaffce4416982da599136042f3
+
