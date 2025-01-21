@@ -1,0 +1,34 @@
+table 테이블
+	lineageTag: 3c455d4d-a2c4-4b8a-9a96-3d12e906557e
+
+	measure 측정값 = 1
+		formatString: 0
+		lineageTag: 223b0ce3-e6c2-4ca9-b307-b544179a0502
+
+	column 열1
+		dataType: string
+		lineageTag: d2db8457-6549-4a41-b39d-20724055ee67
+		summarizeBy: none
+		sourceColumn: 열1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 열2
+		dataType: string
+		lineageTag: b4a5777f-d697-424b-b033-c0eb0109c75d
+		summarizeBy: none
+		sourceColumn: 열2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 테이블 = m
+		mode: import
+		source =
+				let
+				    원본 = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WSklR0gESKUqxsQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [열1 = _t, 열2 = _t]),
+				    #"변경된 유형" = Table.TransformColumnTypes(원본,{{"열1", type text}, {"열2", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+
