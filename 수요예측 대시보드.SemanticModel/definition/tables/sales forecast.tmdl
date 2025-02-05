@@ -1,0 +1,93 @@
+table 'sales forecast'
+	lineageTag: 21469139-0bb2-4921-af58-60e5d3459aaf
+
+	measure 'Forecast Accuracy %' = 1 - DIVIDE(SUM('sales forecast'[계획]) - SUM('sales forecast'[실적]), SUM('sales forecast'[실적] ))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 773bee29-5d23-49f4-b6a3-0b52fb37ab95
+
+	measure 'Forecast Accuracy %_P' = 1 - DIVIDE(SUM('sales forecast'[재고]) - SUM('sales forecast'[수요예측]), SUM('sales forecast'[수요예측] ))
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		lineageTag: 2356ec0d-d94c-4572-9489-4d2be6d0ffb8
+
+	column 실적
+		dataType: int64
+		formatString: #,0
+		lineageTag: 3d0f8c37-3a43-4a1b-b53e-8f7bb7e455c3
+		summarizeBy: sum
+		sourceColumn: 실적
+
+		annotation SummarizationSetBy = Automatic
+
+	column 계획
+		dataType: int64
+		formatString: #,0
+		lineageTag: ecf0b222-f845-40bd-b11f-c142b89368e8
+		summarizeBy: sum
+		sourceColumn: 계획
+
+		annotation SummarizationSetBy = Automatic
+
+	column 월
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 2fa0b8a6-6145-4404-8d64-87b9ef713112
+		summarizeBy: none
+		sourceColumn: 월
+
+		variation 변형
+			isDefault
+			relationship: f60c76de-2050-4988-a719-064640760c2d
+			defaultHierarchy: LocalDateTable_0b97c1d1-08fc-4279-be5d-af32fe417a24.'날짜 계층'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 구분
+		dataType: string
+		lineageTag: c2090e85-524e-4252-8d60-515005360e22
+		summarizeBy: none
+		sourceColumn: 구분
+
+		annotation SummarizationSetBy = Automatic
+
+	column 재고
+		dataType: int64
+		formatString: 0
+		lineageTag: e67627d3-683b-482c-b48b-6e7ec9a6ab47
+		summarizeBy: sum
+		sourceColumn: 재고
+
+		annotation SummarizationSetBy = Automatic
+
+	column 수요예측
+		dataType: int64
+		formatString: 0
+		lineageTag: fe912de7-50cd-4a64-9a4b-f84ead7521f8
+		summarizeBy: sum
+		sourceColumn: 수요예측
+
+		annotation SummarizationSetBy = Automatic
+
+	column 차이 = [수요예측]-[재고]
+		formatString: 0
+		lineageTag: 80cc6f37-6038-43f8-9cd5-62619671daf2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'sales forecast' = m
+		mode: import
+		source =
+				let
+				    원본 = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [실적 = _t, 계획 = _t, 월 = _t, 구분 = _t, 재고 = _t, 수요예측 = _t]),
+				    #"변경된 유형" = Table.TransformColumnTypes(원본,{{"실적", Int64.Type}, {"계획", Int64.Type}, {"월", type date}, {"구분", type text}, {"재고", Int64.Type}, {"수요예측", Int64.Type}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = 탐색
+

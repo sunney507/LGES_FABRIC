@@ -1,0 +1,5 @@
+relationship f60c76de-2050-4988-a719-064640760c2d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'sales forecast'.월
+	toColumn: LocalDateTable_0b97c1d1-08fc-4279-be5d-af32fe417a24.Date
+

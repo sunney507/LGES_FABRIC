@@ -1,0 +1,20 @@
+model Model
+	culture: ko-KR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ko-KR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["sales forecast"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+ref table 'sales forecast'
+ref table DateTableTemplate_18c0da9f-53bb-4dde-906b-aff77ef24813
+ref table LocalDateTable_0b97c1d1-08fc-4279-be5d-af32fe417a24
+
+ref cultureInfo ko-KR
+

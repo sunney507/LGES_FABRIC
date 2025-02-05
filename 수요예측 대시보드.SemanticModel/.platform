@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "수요예측 대시보드"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e3d98c2d-e943-bf98-45a1-2e9d7d82f166"
+  }
+}

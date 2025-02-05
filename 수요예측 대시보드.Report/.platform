@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "수요예측 대시보드"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "99f54efd-fdf1-8a42-4669-276438469662"
+  }
+}
