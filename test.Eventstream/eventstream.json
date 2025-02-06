@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "id": "3b4e08f7-9965-478d-9aba-03e8248bba14",
+      "name": "tests",
+      "type": "CustomEndpoint",
+      "properties": {}
+    }
+  ],
+  "destinations": [
+    {
+      "id": "c06800f2-47a6-42af-b701-16d38df22b35",
+      "name": "test2",
+      "type": "CustomEndpoint",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "test-stream"
+        }
+      ],
+      "inputSchemas": []
+    }
+  ],
+  "streams": [
+    {
+      "id": "cabc27b7-7713-4e24-851a-20fc9da48ce6",
+      "name": "test-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "tests"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.0"
+}
